@@ -184,7 +184,7 @@
 @media (min-width: 768.98px) {
   .catalog__title {
     font-family: "Halvar Breitschrift CY";
-    font-weight: 300;
+    font-weight: 100;
     max-width: 1025px;
     font-size: 90px;
     margin-bottom: 64px;

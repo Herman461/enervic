@@ -236,6 +236,18 @@ img {
   display: block;
 }
 
+.navigation-page__item {
+  font-family: "Halvar Breitschrift CY";
+  color: #A7ABAF;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.navigation-page__item a {
+  font-size: 18px;
+  color: #636772;
+}
+
 .swiper-build {
   overflow: hidden;
 }
@@ -893,16 +905,6 @@ textarea.input::placeholder {
     padding-bottom: 20px;
   }
 
-  .navigation-page__item {
-    font-family: "Halvar Breitschrift CY";
-    color: #A7ABAF;
-    margin-bottom: 12px;
-  }
-
-  .navigation-page__item a {
-    color: #636772;
-  }
-
   .menu__content {
     padding-left: 117px;
     padding-right: 30px;
@@ -1040,6 +1042,14 @@ textarea.input::placeholder {
 }
 
 @media (max-width: 1920px) {
+  .navigation-page__item {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
+  }
+
+  .navigation-page__item a {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
+  }
+
   .date {
     font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   }
@@ -1118,8 +1128,16 @@ textarea.input::placeholder {
     padding-right: 15px;
   }
 
-  .page__navigation {
-    display: none;
+  .page {
+    padding-top: 100px;
+  }
+
+  .navigation-page__list {
+    margin-bottom: 40px;
+  }
+
+  .navigation-page__item {
+    display: inline;
   }
 
   .menu__content {

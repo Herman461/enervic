@@ -1,0 +1,569 @@
+.about-intro {
+  margin-bottom: 40px;
+}
+
+.about-intro__container img {
+  width: 100%;
+  height: auto;
+  border-bottom-right-radius: 146px;
+}
+
+.page {
+  padding-bottom: 175px;
+}
+
+.page__container {
+  margin-bottom: 144px;
+}
+
+.about__main {
+  margin-bottom: 55px;
+}
+
+.about__info {
+  margin-bottom: 180px;
+}
+
+.main-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-about__title {
+  font-family: "Halvar Breitschrift CY";
+  font-weight: 300;
+  font-size: 90px;
+  margin-bottom: 48px;
+}
+
+.info-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-about__side img {
+  border-bottom-right-radius: 108px;
+  max-width: 100%;
+  height: auto;
+  border-bottom-right-radius: 108px;
+}
+
+.spoilers-about__item {
+  padding: 40px 0;
+  border-bottom: 2px solid #636772;
+}
+
+.spoilers-about__item:first-child {
+  border-top: 2px solid #636772;
+}
+
+.spoilers-about__icon {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spoilers-about__title {
+  text-transform: lowercase;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.spoilers-about__title span {
+  font-family: "Halvar Breitschrift CY";
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 28px;
+}
+
+.spoilers-about__title.active .spoilers-about__icon {
+  opacity: 1;
+  visibility: visible;
+}
+
+.spoilers-about__title.active .spoilers-about__arrow svg {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.spoilers-about__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.spoilers-about__arrow svg {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.spoilers-about__text {
+  padding-top: 24px;
+}
+
+.mission-about__title {
+  max-width: 885px;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.mission-about__title h2 {
+  font-size: 56px;
+}
+
+.mission-about__title svg {
+  width: 48px;
+  height: 48px;
+}
+
+.mission-about__blocks {
+  max-width: 885px;
+  margin: 0 0 40px 0;
+}
+
+.mission-about__image img {
+  width: 100%;
+  height: auto;
+  border-bottom-right-radius: 120px;
+}
+
+.about-bottom__title {
+  max-width: 1104px;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.about-bottom__title h2 {
+  font-size: 56px;
+}
+
+.about-bottom__title svg {
+  width: 48px;
+  height: 48px;
+}
+
+.about-bottom__images .swiper-slide {
+  height: auto !important;
+}
+
+.about-bottom__image img {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-bottom__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about-bottom__link span {
+  font-family: "Halvar Breitschrift CY";
+  font-size: 18px;
+  color: #494D58;
+}
+
+.about-bottom__link svg {
+  width: 56px;
+  height: 24px;
+  margin-right: 24px;
+}
+
+@media (min-width: 768.98px) {
+  .mission-about__blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 -10px 48px;
+  }
+
+  .mission-about__block {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .mission-about__block:nth-child(1) {
+    max-width: 484px;
+  }
+
+  .mission-about__block:nth-child(2) {
+    max-width: 324px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .main-about__content {
+    padding-right: 50px;
+  }
+
+  .main-about__link svg {
+    color: #636772;
+    width: 109px;
+    height: 24px;
+  }
+
+  .info-about__content {
+    padding-right: 50px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .info-about__side {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px;
+  }
+
+  .info-about__side img {
+    width: 100%;
+  }
+
+  .spoilers-about__icon svg {
+    width: 48px;
+    height: 48px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #494D58;
+  }
+
+  .mission-about__title svg {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+
+  .about-bottom__subimage {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 220px;
+    flex: 0 0 220px;
+    margin-right: 20px;
+  }
+
+  .about-bottom__subimage img {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 124px;
+  }
+
+  .about-bottom__content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .about-bottom__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .about-bottom__title svg {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+
+  .about-bottom__title {
+    margin-left: 240px;
+  }
+
+  .about-bottom__image_sub {
+    display: none;
+  }
+}
+
+@media (min-width: 1200.98px) {
+  .main-about__text {
+    max-width: 642px;
+  }
+
+  .main-about__side {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 290px;
+    flex: 0 0 290px;
+  }
+
+  .main-about__side p {
+    font-family: "Halvar Breitschrift CY";
+    line-height: 140%;
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .info-about__side {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 444px;
+    flex: 0 0 444px;
+  }
+
+  .about-bottom__images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .about-bottom__images {
+    padding-right: 50px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .about-bottom__text {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 377px;
+    flex: 0 0 377px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .main-about__content {
+    padding-right: 136px;
+  }
+
+  .info-about__content {
+    padding-right: 136px;
+  }
+
+  .spoilers-about__icon svg {
+    width: 96px;
+    height: 96px;
+  }
+
+  .mission-about__title svg {
+    width: 96px;
+    height: 96px;
+  }
+
+  .about-bottom__subimage {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 445px;
+    flex: 0 0 445px;
+  }
+
+  .about-bottom__title svg {
+    width: 96px;
+    height: 96px;
+  }
+
+  .about-bottom__title {
+    margin-left: 465px;
+  }
+
+  .about-bottom__images {
+    padding-right: 137px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .about-intro {
+    margin-bottom: calc(24px + 16 * ((100vw - 320px) / 1600));
+  }
+
+  .about-intro__container img {
+    border-bottom-right-radius: calc(80px + 66 * ((100vw - 320px) / 1600));
+  }
+
+  .page {
+    padding-bottom: calc(120px + 55 * ((100vw - 320px) / 1600));
+  }
+
+  .page__container {
+    margin-bottom: calc(80px + 64 * ((100vw - 320px) / 1600));
+  }
+
+  .about__info {
+    margin-bottom: calc(80px + 100 * ((100vw - 320px) / 1600));
+  }
+
+  .main-about__title {
+    font-size: calc(38px + 52 * ((100vw - 320px) / 1600));
+  }
+
+  .info-about__side img {
+    border-bottom-right-radius: calc(80px + 28 * ((100vw - 320px) / 1600));
+  }
+
+  .spoilers-about__title span {
+    font-size: calc(18px + 10 * ((100vw - 320px) / 1600));
+  }
+
+  .mission-about__title {
+    margin-bottom: calc(40px + 24 * ((100vw - 320px) / 1600));
+  }
+
+  .mission-about__title h2 {
+    font-size: calc(28px + 28 * ((100vw - 320px) / 1600));
+  }
+
+  .mission-about__image img {
+    border-bottom-right-radius: calc(80px + 40 * ((100vw - 320px) / 1600));
+  }
+
+  .about-bottom__title {
+    margin-bottom: calc(40px + 24 * ((100vw - 320px) / 1600));
+  }
+
+  .about-bottom__title h2 {
+    font-size: calc(28px + 28 * ((100vw - 320px) / 1600));
+  }
+
+  .about-bottom__image img {
+    min-height: calc(320px + 30 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (max-width: 1200.98px) {
+  .main-about__side {
+    display: none;
+  }
+
+  .about-bottom__images {
+    margin-top: 40px;
+  }
+
+  .about-bottom__text {
+    max-width: 377px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-intro__container img {
+    min-height: 320px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 40% center;
+    object-position: 40% center;
+  }
+
+  .about__main {
+    margin-bottom: 80px;
+  }
+
+  .info-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .info-about__side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .spoilers-about__item {
+    padding: 20px 0;
+  }
+
+  .spoilers-about__item:first-child {
+    border-top: 1px solid #636772;
+  }
+
+  .spoilers-about__item {
+    border-bottom: 1px solid #636772;
+  }
+
+  .spoilers-about__icon svg {
+    display: none;
+  }
+
+  .mission-about__title svg {
+    margin-bottom: 15px;
+  }
+
+  .about-bottom__subimage {
+    display: none;
+  }
+
+  .about-bottom__title svg {
+    margin-bottom: 15px;
+  }
+
+  .about-bottom__images {
+    overflow: visible !important;
+  }
+
+  .about-bottom__image img {
+    height: 100%;
+  }
+
+  .about-bottom__image_sub img {
+    border-bottom-left-radius: 80px;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .mission-about__block {
+    margin-bottom: 20px;
+  }
+
+  .mission-about__block:last-child {
+    margin: 0;
+  }
+
+  .mission-about__image img {
+    min-height: 240px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 991.98px) and (max-width: 1650.98px) {
+  .navigation-page {
+    padding-right: 58px;
+  }
+}
+
+@media (min-width: 1200.98px) and (max-width: 1920px) {
+  .main-about__side p {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 991.98px) and (max-width: 1920px) {
+  .about-bottom__subimage img {
+    border-bottom-left-radius: calc(80px + 44 * ((100vw - 320px) / 1600));
+  }
+}
