@@ -1,0 +1,153 @@
+.page {
+  padding-bottom: 260px;
+}
+
+.block-materials__top {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.block-materials__top.active .block-materials__arrow svg {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.block-materials__title {
+  text-transform: lowercase;
+  font-size: 56px;
+  font-family: "Halvar Breitschrift CY";
+  font-weight: 300;
+}
+
+.block-materials__button {
+  cursor: pointer;
+}
+
+.block-materials__button.swiper-button-lock {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.block-materials__slide {
+  display: block;
+}
+
+.block-materials__image {
+  margin-bottom: 16px;
+}
+
+.block-materials__image img {
+  min-height: 516px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.block-materials__name {
+  font-size: 18px;
+  text-transform: lowercase;
+  color: #636772;
+}
+
+@media (min-width: 991.98px) {
+  .materials__block {
+    margin-bottom: 120px;
+  }
+
+  .block-materials__top {
+    margin-bottom: 48px;
+  }
+
+  .block-materials__navigation {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .block-materials__button {
+    margin-right: 26px;
+  }
+
+  .block-materials__button:last-child {
+    margin: 0;
+  }
+
+  .block-materials__button svg {
+    width: 56px;
+    height: 24px;
+  }
+
+  .block-materials__arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 1920px) {
+  .page {
+    padding-bottom: calc(120px + 140 * ((100vw - 320px) / 1600));
+  }
+
+  .block-materials__title {
+    font-size: calc(22px + 34 * ((100vw - 320px) / 1600));
+  }
+
+  .block-materials__image img {
+    min-height: calc(240px + 276 * ((100vw - 320px) / 1600));
+  }
+
+  .block-materials__name {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .materials__block {
+    margin-bottom: -1px;
+  }
+
+  .block-materials {
+    border-top: 1px solid #636772;
+    border-bottom: 1px solid #636772;
+  }
+
+  .block-materials__top {
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .block-materials__navigation {
+    display: none;
+  }
+
+  .block-materials__arrow {
+    margin-left: 10px;
+  }
+
+  .block-materials__arrow svg {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 20px;
+    height: 20px;
+  }
+
+  .block-materials__slider {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    overflow: visible !important;
+  }
+}

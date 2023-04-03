@@ -49,48 +49,6 @@
     font-size: 90px;
     margin-bottom: 60px;
   }
-
-  .pagging {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .pagging__item {
-    margin-right: 16px;
-  }
-
-  .pagging__item:first-child {
-    margin-right: 40px;
-  }
-
-  .pagging__item:last-child {
-    margin-left: 24px;
-    margin-right: 0;
-  }
-
-  .pagging__item_disabled .pagging__link {
-    cursor: auto;
-    pointer-events: none;
-  }
-
-  .pagging__item_disabled svg {
-    opacity: 0.5;
-  }
-
-  .pagging__item svg {
-    width: 56px;
-    height: 24px;
-  }
-
-  .pagging__link {
-    font-family: "Halvar Breitschrift CY";
-    font-weight: 300;
-    font-size: 28px;
-  }
 }
 
 @media (min-width: 991.98px) {
@@ -139,10 +97,6 @@
   .news__item {
     padding: 0 7px;
   }
-
-  .pagging {
-    display: none;
-  }
 }
 
 @media (min-width: 768.98px) and (max-width: 1920px) {
@@ -152,9 +106,5 @@
 
   .news__title {
     margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1600));
-  }
-
-  .pagging__link {
-    font-size: calc(20px + 8 * ((100vw - 320px) / 1600));
   }
 }

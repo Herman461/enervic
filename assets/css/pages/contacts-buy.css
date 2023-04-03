@@ -1,0 +1,176 @@
+.page {
+  padding-bottom: 210px;
+}
+
+.block-contacts-buy__top {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.block-contacts-buy__top.active .block-contacts-buy__arrow svg {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.block-contacts-buy__title {
+  font-size: 56px;
+  font-family: "Halvar Breitschrift CY";
+  font-weight: 300;
+  max-width: 1047px;
+}
+
+.block-contacts-buy__button {
+  cursor: pointer;
+}
+
+.block-contacts-buy__button.swiper-button-lock {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.block-contacts-buy__slide {
+  background: #fff;
+  height: auto !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.block-contacts-buy__brand {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 76px;
+}
+
+.block-contacts-buy__brand img {
+  max-width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.block-contacts-buy__name {
+  font-family: "Halvar Breitschrift CY";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 24px;
+  color: #494D58;
+}
+
+.block-contacts-buy__link {
+  font-size: 14px;
+  line-height: 100%;
+  text-decoration: underline;
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+@media (min-width: 991.98px) {
+  .contacts-buy__block {
+    margin-bottom: 120px;
+  }
+
+  .block-contacts-buy__top {
+    margin-bottom: 48px;
+  }
+
+  .block-contacts-buy__navigation {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .block-contacts-buy__button {
+    margin-right: 26px;
+  }
+
+  .block-contacts-buy__button:last-child {
+    margin: 0;
+  }
+
+  .block-contacts-buy__button svg {
+    width: 56px;
+    height: 24px;
+  }
+
+  .block-contacts-buy__arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 1920px) {
+  .block-contacts-buy__title {
+    font-size: calc(22px + 34 * ((100vw - 320px) / 1600));
+  }
+
+  .block-contacts-buy__brand {
+    margin-bottom: calc(60px + 16 * ((100vw - 320px) / 1600));
+  }
+
+  .block-contacts-buy__link {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .contacts-buy__block {
+    margin-bottom: -1px;
+  }
+
+  .block-contacts-buy {
+    border-top: 1px solid #636772;
+    border-bottom: 1px solid #636772;
+  }
+
+  .block-contacts-buy__top {
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .block-contacts-buy__navigation {
+    display: none;
+  }
+
+  .block-contacts-buy__arrow {
+    margin-left: 10px;
+  }
+
+  .block-contacts-buy__arrow svg {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 20px;
+    height: 20px;
+  }
+
+  .block-contacts-buy__slider {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .block-contacts-buy__slide {
+    padding: 20px;
+  }
+}
