@@ -39,6 +39,7 @@
 }
 
 .block-materials__image {
+  position: relative;
   margin-bottom: 16px;
 }
 
@@ -55,6 +56,50 @@
   font-size: 18px;
   text-transform: lowercase;
   color: #636772;
+}
+
+.hover-block-materials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #FEED01;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.hover-block-materials__icon {
+  margin-bottom: 16px;
+}
+
+.hover-block-materials__icon svg {
+  width: 70px;
+  height: 70px;
+  color: #494D58;
+}
+
+.hover-block-materials__label {
+  font-family: "Halvar Breitschrift CY";
+  font-size: 18px;
+  color: #494D58;
 }
 
 @media (min-width: 991.98px) {
@@ -149,5 +194,12 @@
     padding-top: 20px;
     padding-bottom: 40px;
     overflow: visible !important;
+  }
+}
+
+@media (any-hover: hover) {
+  .block-materials__slide:hover .hover-block-materials {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }

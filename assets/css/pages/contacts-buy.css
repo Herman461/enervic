@@ -76,6 +76,8 @@
   text-decoration: underline;
   font-size: 18px;
   opacity: 0.5;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 @media (min-width: 991.98px) {
@@ -172,5 +174,12 @@
 @media (max-width: 768.98px) {
   .block-contacts-buy__slide {
     padding: 20px;
+  }
+}
+
+@media (any-hover: hover) {
+  .block-contacts-buy__link:hover {
+    text-decoration: underline;
+    opacity: 1;
   }
 }

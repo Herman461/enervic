@@ -1,7 +1,20 @@
+.contacts__email {
+  font-family: "Halvar Breitschrift CY";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 56px;
+  font-size: 56px;
+  color: #494D58;
+  display: inline-block;
+  background: #FEED01;
+  margin-bottom: 55px;
+}
+
 .contacts__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-transform: lowercase;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -11,6 +24,15 @@
   margin-bottom: 48px;
   font-size: 56px;
   font-family: "Halvar Breitschrift CY";
+}
+
+.contacts__title_offset {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts__title_offset.active {
+  margin-bottom: 3px !important;
 }
 
 .contacts__title.transition-end + .contacts__slider .office-contacts__body {
@@ -26,6 +48,10 @@
   height: auto !important;
 }
 
+.contacts__department {
+  padding-bottom: 120px;
+}
+
 .office-contacts__body {
   background: #F9F9F9;
   display: -webkit-box;
@@ -35,8 +61,29 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 320px;
+  height: 100%;
+  min-height: 240px;
   padding: 24px;
+}
+
+.office-contacts__name {
+  font-family: "Halvar Breitschrift CY";
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.office-contacts__who {
+  opacity: 0.5;
+}
+
+.office-contacts__icon {
+  margin-bottom: 86px;
+}
+
+.office-contacts__icon img {
+  width: 55px;
+  height: 55px;
 }
 
 .office-contacts__city {
@@ -52,6 +99,7 @@
   font-size: 18px;
   line-height: 100%;
   opacity: 0.5;
+  margin-bottom: 30px;
 }
 
 .office-contacts__address {
@@ -156,10 +204,19 @@
     -ms-flex: 0 1 25%;
     flex: 0 1 25%;
     padding: 0 10px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 1920px) {
+  .contacts__email {
+    font-size: calc(24px + 32 * ((100vw - 320px) / 1600));
+  }
+
+  .contacts__email {
+    margin-bottom: calc(30px + 25 * ((100vw - 320px) / 1600));
+  }
+
   .contacts__title {
     margin-bottom: calc(40px + 8 * ((100vw - 320px) / 1600));
   }
@@ -172,12 +229,20 @@
     padding-bottom: calc(40px + 80 * ((100vw - 320px) / 1600));
   }
 
+  .contacts__department {
+    padding-bottom: calc(40px + 80 * ((100vw - 320px) / 1600));
+  }
+
   .office-contacts__body {
-    min-height: calc(208px + 112 * ((100vw - 320px) / 1600));
+    min-height: calc(208px + 32 * ((100vw - 320px) / 1600));
   }
 
   .office-contacts__body {
     padding: calc(20px + 4 * ((100vw - 320px) / 1600));
+  }
+
+  .office-contacts__icon {
+    margin-bottom: calc(50px + 36 * ((100vw - 320px) / 1600));
   }
 
   .office-contacts__city {
@@ -216,6 +281,9 @@
 @media (max-width: 991.98px) {
   .contacts__title svg {
     width: 16px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16px;
+    flex: 0 0 16px;
     height: 16px;
     margin-left: 20px;
     -webkit-transition: all 0.3s ease 0s;

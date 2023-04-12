@@ -51,12 +51,26 @@
   font-family: "Halvar Breitschrift CY", sans-serif;
   font-weight: 300;
   font-size: 132px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#AAACB4), color-stop(#747983), to(#646873));
-  background-image: linear-gradient(to right, #AAACB4, #747983, #646873);
-  color: transparent;
+  color: #191335;
+  background-image: -webkit-gradient(linear, left top, right top, from(#AAACB4), color-stop(33.33333%, #747983), color-stop(66.66666%, #646873), to(#646873));
+  background-image: linear-gradient(to right, #AAACB4, #747983 33.33333%, #646873 66.66666%, #646873);
   -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 100%;
+  background-position: top left;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   margin-bottom: 48px;
+}
+
+.intro__title::-moz-selection {
+  -webkit-text-fill-color: #494D58;
+  color: #494D58;
+}
+
+.intro__title::selection {
+  -webkit-text-fill-color: #494D58;
+  color: #494D58;
 }
 
 .intro__text {
@@ -173,6 +187,11 @@
   margin-bottom: 15px;
 }
 
+.item-products-page__title span {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .item-products-page__image {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -198,7 +217,18 @@
   max-width: 1012px;
 }
 
+.item-contacts-page__icon {
+  margin-bottom: 16px;
+}
+
+.item-contacts-page__icon svg {
+  width: 50px;
+  height: 50px;
+  color: #636772;
+}
+
 .item-contacts-page__title {
+  text-transform: lowercase;
   cursor: pointer;
   border-top: 1px solid #636772;
   border-bottom: 1px solid #636772;
@@ -235,29 +265,39 @@
   padding-top: 32px;
 }
 
+.item-contacts-page__body_offset {
+  padding-top: 1px;
+}
+
+.item-contacts-page__name {
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.item-contacts-page__who {
+  font-size: 18px;
+  color: #C4C6CD;
+  margin-bottom: 16px;
+}
+
+.item-contacts-page__who:last-child {
+  margin: 0;
+}
+
+.item-contacts-page__email {
+  background: #FEED01;
+  font-weight: 300;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 53px;
+}
+
 .item-contacts-page__column {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 470px;
-  flex: 0 0 470px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0 37.5px;
-  margin-bottom: 52px;
-}
-
-.item-contacts-page__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0 -37.5px;
-}
-
-.item-contacts-page__row_three .item-contacts-page__column {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 33.333%;
-  flex: 0 1 33.333%;
+  max-width: 470px;
 }
 
 .item-contacts-page__place {
@@ -284,15 +324,52 @@
 
 .item-contacts-page__phone {
   line-height: 140%;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .header__logo {
   display: block !important;
 }
 
+.title {
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+
+.title.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
 @media (min-width: 480.98px) {
   .intro__bg_adapt {
     display: none;
+  }
+
+  .item-contacts-page__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 52px;
+  }
+
+  .item-contacts-page__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -20px;
   }
 }
 
@@ -373,6 +450,24 @@
     display: flex;
     -ms-flex-item-align: end;
     align-self: flex-end;
+  }
+
+  .contacts-page__link {
+    display: none;
+  }
+
+  .item-contacts-page__column {
+    padding: 0 37.5px;
+  }
+
+  .item-contacts-page__row {
+    margin: 0 -37.5px;
+  }
+
+  .item-contacts-page__row_three .item-contacts-page__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%;
   }
 }
 
@@ -481,8 +576,12 @@
     font-size: calc(18px + 10 * ((100vw - 320px) / 1600));
   }
 
-  .item-contacts-page__column {
-    margin-bottom: calc(20px + 32 * ((100vw - 320px) / 1600));
+  .item-contacts-page__email {
+    font-size: calc(22px + 6 * ((100vw - 320px) / 1600));
+  }
+
+  .item-contacts-page__email {
+    margin-bottom: calc(30px + 23 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -549,6 +648,10 @@
     min-height: 320px;
   }
 
+  .contacts-page__link {
+    margin-top: 40px;
+  }
+
   .item-contacts-page__text {
     font-size: 14px;
   }
@@ -566,6 +669,18 @@
   .intro__bg_adapt {
     display: block;
   }
+
+  .item-contacts-page__body {
+    padding-bottom: 32px;
+  }
+
+  .item-contacts-page__column {
+    margin-bottom: 20px;
+  }
+
+  .item-contacts-page__column:last-child {
+    margin: 0;
+  }
 }
 
 @media (max-width: 360.98px) {
@@ -574,8 +689,28 @@
   }
 }
 
+@media (min-width: 480.98px) and (max-width: 1920px) {
+  .item-contacts-page__column {
+    margin-bottom: calc(20px + 32 * ((100vw - 320px) / 1600));
+  }
+}
+
 @media (any-hover: hover) {
+  .intro__title:hover {
+    background-position: top left 100%;
+  }
+
   .products-page__button:hover svg {
     color: #000;
+  }
+
+  .products-page__item:hover .item-products-page__title span {
+    background: #FEED01;
+    color: #494D58;
+  }
+
+  .item-contacts-page__phone:hover {
+    color: #494D58;
+    background: #FEED01;
   }
 }

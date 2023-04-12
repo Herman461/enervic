@@ -111,9 +111,12 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .gallery-product__download svg {
+  position: relative;
+  z-index: 2;
   margin-right: 16px;
   width: 20px;
   height: 20px;
@@ -121,12 +124,28 @@
 }
 
 .gallery-product__download span {
+  position: relative;
+  z-index: 2;
+  color: #494D58;
   font-family: "Halvar Breitschrift CY";
   text-transform: lowercase;
 }
 
 .gallery-product__download span span {
   display: none;
+}
+
+.gallery-product__download::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: calc(100% + 18px);
+  height: calc(100% + 8px);
 }
 
 .gallery-product__button {
@@ -243,5 +262,11 @@
   .product__gallery {
     max-width: 450px;
     margin: 0 auto 40px;
+  }
+}
+
+@media (any-hover: hover) {
+  .gallery-product__download:hover::before {
+    background: #FEED01;
   }
 }

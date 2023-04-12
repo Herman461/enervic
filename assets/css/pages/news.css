@@ -20,6 +20,7 @@
 }
 
 .item-news__image {
+  display: block;
   margin-bottom: 24px;
 }
 
@@ -38,6 +39,7 @@
 }
 
 .item-news__title {
+  font-family: "Halvar Breitschrift CY";
   font-size: 18px;
 }
 
@@ -106,5 +108,11 @@
 
   .news__title {
     margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (any-hover: hover) {
+  .item-news__title:hover {
+    text-decoration: underline;
   }
 }

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css?_v=20230403031923">
-    <link rel="stylesheet" href="assets/css/pages/home.css?_v=20230403031923">
+    <link rel="stylesheet" href="assets/css/style.css?_v=20230412225332">
+    <link rel="stylesheet" href="assets/css/pages/home.css?_v=20230412225332">
     <title>Главная</title>
 </head>
 
@@ -32,17 +32,55 @@
                     </div>
                     <div class="menu__content">
                         <form action="#" class="menu__search search-menu">
-                            <div class="search-menu__item">
-                                <div class="search-menu__label">поиск по&nbsp;каталогу</div>
-                                <div class="search-menu__input">
-                                    <input data-placeholder="введите наименование или артикул" placeholder="поиск по каталогу" class="input" type="text">
+                            <div class="search-menu__body">
+                                <div class="search-menu__item">
+                                    <div class="search-menu__label">поиск по&nbsp;каталогу</div>
+                                    <div class="search-menu__input">
+                                        <input placeholder="название или артикул" class="input" type="text">
+                                    </div>
+                                    <div class="search-menu__icon stroke">
+                                        <svg>
+                                            <use xlink:href="assets/images/icons/icons.svg#search"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="search-menu__icon stroke">
-                                    <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#search"></use>
-                                    </svg>
+                                <div class="search-menu__result result-search-menu">
+                                    <ul class="result-search-menu__list">
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__product">
+                                                <div class="result-search-menu__image">
+                                                    <img src="assets/images/product/item.png" alt="">
+                                                </div>
+                                                <div class="result-search-menu__content">
+                                                    <div class="result-search-menu__pin">SEW20.1</div>
+                                                    <div class="result-search-menu__name">Скоба Г-образная</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__product">
+                                                <div class="result-search-menu__image">
+                                                    <img src="assets/images/product/item.png" alt="">
+                                                </div>
+                                                <div class="result-search-menu__content">
+                                                    <div class="result-search-menu__pin">SEW20.1</div>
+                                                    <div class="result-search-menu__name">Скоба Г-образная</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="result-search-menu__list">
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__category">ценности</a>
+                                        </li>
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__category">производство</a>
+                                        </li>
+                                    </ul>
+
                                 </div>
                             </div>
+
                         </form>
                         <div class="menu__row">
                             <div class="menu__column">
@@ -168,15 +206,17 @@
                 <div class="page__navigation navigation-page">
                     <div class="navigation-page__body">
                         <ul class="navigation-page__list">
-                            <li class="navigation-page__item">enervic /</li>
-                            <li class="navigation-page__item">О компании</li>
+                            <li class="navigation-page__item">
+                                <a href="/">enervic /</a>
+                            </li>
+                            <li class="navigation-page__item navigation-page__item_other">О компании</li>
                         </ul>
                     </div>
 
                 </div>
                 <div class="page__content">
-                    <div class="section page__about about-page">
-                        <div class="about-page__title title">
+                    <div data-section-navigation="О компании" class="section page__about about-page">
+                        <div class="about-page__title anim-items title">
                             <div class="title__icon stroke">
                                 <svg>
                                     <use xlink:href="assets/images/icons/icons.svg#lightbold"></use>
@@ -205,8 +245,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section page__products products-page">
-                        <div class="products-page__title title">
+                    <div data-section-navigation="продукция /" class="section page__products products-page">
+                        <div class="products-page__title anim-items title">
                             <div class="title__icon stroke">
                                 <svg>
                                     <use xlink:href="assets/images/icons/icons.svg#rocket"></use>
@@ -234,32 +274,40 @@
                         </div>
                         <div class="products-page__slider swiper">
                             <a href="" class="products-page__item item-products-page">
-                                <div class="item-products-page__title">арматура
-                                    <br>для&nbsp;универсального кабеля
+                                <div class="item-products-page__title">
+                                    <span>арматура
+                                        <br>для&nbsp;универсального кабеля
+                                    </span>
                                 </div>
                                 <div class="item-products-page__image">
                                     <img src="assets/images/home/product_1.png" alt="">
                                 </div>
                             </a>
                             <a href="" class="products-page__item item-products-page">
-                                <div class="item-products-page__title">арматура
-                                    <br>для&nbsp;универсального кабеля
+                                <div class="item-products-page__title">
+                                    <span>арматура
+                                        <br>для&nbsp;универсального кабеля
+                                    </span>
                                 </div>
                                 <div class="item-products-page__image">
                                     <img src="assets/images/home/product_2.png" alt="">
                                 </div>
                             </a>
                             <a href="" class="products-page__item item-products-page">
-                                <div class="item-products-page__title">арматура
-                                    <br>для&nbsp;универсального кабеля
+                                <div class="item-products-page__title">
+                                    <span>арматура
+                                        <br>для&nbsp;универсального кабеля
+                                    </span>
                                 </div>
                                 <div class="item-products-page__image">
                                     <img src="assets/images/home/product_3.png" alt="">
                                 </div>
                             </a>
                             <a href="" class="products-page__item item-products-page">
-                                <div class="item-products-page__title">арматура
-                                    <br>для&nbsp;универсального кабеля
+                                <div class="item-products-page__title">
+                                    <span>арматура
+                                        <br>для&nbsp;универсального кабеля
+                                    </span>
                                 </div>
                                 <div class="item-products-page__image">
                                     <img src="assets/images/home/product_2.png" alt="">
@@ -273,8 +321,8 @@
                             <span>перейти в каталог</span>
                         </a>
                     </div>
-                    <div class="section page__contacts contacts-page">
-                        <div class="contacts-page__title title">
+                    <div data-section-navigation="контакты" class="section page__contacts contacts-page">
+                        <div class="contacts-page__title anim-items title">
                             <div class="title__icon stroke">
                                 <svg>
                                     <use xlink:href="assets/images/icons/icons.svg#note"></use>
@@ -324,7 +372,7 @@
                                 </div>
                             </div>
                             <div class="contacts-page__item item-contacts-page">
-                                <div data-spoiler="" class="item-contacts-page__title active stroke">
+                                <div data-spoiler="" class="item-contacts-page__title stroke">
                                     отдел продаж
                                     <svg>
                                         <use xlink:href="assets/images/icons/icons.svg#angle-down"></use>
@@ -336,38 +384,99 @@
                                             <div class="item-contacts-page__place item-contacts-page__place_m">
                                                 Северо-Западный и&nbsp;Южный федеральный округ:
                                             </div>
-                                            <div class="item-contacts-page__name"></div>
-                                            <div class="item-contacts-page__who"></div>
+
                                             <div class="item-contacts-page__phone">+7&nbsp;921&nbsp;993-20-40</div>
                                         </div>
                                         <div class="item-contacts-page__column">
                                             <div class="item-contacts-page__place item-contacts-page__place_m">
                                                 Центральный и&nbsp;Приволжский федеральный округ:
                                             </div>
-                                            <div class="item-contacts-page__name"></div>
-                                            <div class="item-contacts-page__who"></div>
+
                                             <div class="item-contacts-page__phone">+7&nbsp;985&nbsp;226-73-00</div>
                                         </div>
                                         <div class="item-contacts-page__column">
                                             <div class="item-contacts-page__place item-contacts-page__place_m">
                                                 Дальневосточный федеральный округ:
                                             </div>
-                                            <div class="item-contacts-page__name"></div>
-                                            <div class="item-contacts-page__who"></div>
+
                                             <div class="item-contacts-page__phone">+7&nbsp;914&nbsp;706-55-31</div>
                                         </div>
                                         <div class="item-contacts-page__column">
                                             <div class="item-contacts-page__place item-contacts-page__place_m">
                                                 Уральский и&nbsp;Сибирский федеральный округ:
                                             </div>
-                                            <div class="item-contacts-page__name"></div>
-                                            <div class="item-contacts-page__who"></div>
+
                                             <div class="item-contacts-page__phone">+7&nbsp;913&nbsp;705-25-13</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="contacts-page__item item-contacts-page">
+                                <div data-spoiler="" class="item-contacts-page__title stroke">
+                                    Техническая поддержка
+                                    <svg>
+                                        <use xlink:href="assets/images/icons/icons.svg#angle-down"></use>
+                                    </svg>
+                                </div>
+                                <div class="item-contacts-page__body item-contacts-page__body_offset">
+                                    <a href="mailto:tech@enervic.ru" class="item-contacts-page__email">tech@enervic.ru</a>
+                                    <div class="item-contacts-page__row item-contacts-page__row_three">
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Кубасов Тимофей</div>
+                                            <div class="item-contacts-page__who">Технический директор</div>
+                                        </div>
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Беляков Александр</div>
+                                            <div class="item-contacts-page__who">Ведущий специалист</div>
+                                        </div>
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Логинова Сима</div>
+                                            <div class="item-contacts-page__who">Ведущий специалист</div>
+                                        </div>
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Попов Александр</div>
+                                            <div class="item-contacts-page__who">Заместитель технического директора</div>
+                                        </div>
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Силин Владимир</div>
+                                            <div class="item-contacts-page__who">Ведущий технический специалист</div>
+                                        </div>
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Абраменко Антон</div>
+                                            <div class="item-contacts-page__who">Ведущий технический специалиста</div>
+                                        </div>
+                                        <div class="item-contacts-page__column">
+                                            <div class="item-contacts-page__name">Роман Малютин</div>
+                                            <div class="item-contacts-page__who">Ведущий специалист-проектировщик</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts-page__item item-contacts-page">
+                                <div data-spoiler="" class="item-contacts-page__title stroke">
+                                    отдел развития
+                                    <svg>
+                                        <use xlink:href="assets/images/icons/icons.svg#angle-down"></use>
+                                    </svg>
+                                </div>
+                                <div class="item-contacts-page__body">
+                                    <div class="item-contacts-page__icon stroke">
+                                        <svg>
+                                            <use xlink:href="assets/images/icons/icons.svg#rocket"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-contacts-page__name">Шаманов Дмитрий Георгиевич</div>
+                                    <div class="item-contacts-page__who">Технический директор</div>
+                                    <a href="" class="item-contacts-page__phone">+7&nbsp;985&nbsp;727-52-77</a>
+                                </div>
+                            </div>
                         </div>
+                        <a href="" class="contacts-page__link link">
+                            <svg>
+                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
+                            </svg>
+                            <span>где купить</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -445,12 +554,12 @@
         </footer>
 
     </div>
-    <script src="assets/js/components/swiper-build.js?_v=20230403031923"></script>
-    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20230403031923"></script>
-    <script src="assets/js/script.js?_v=20230403031923"></script>
-    <script src="assets/js/app.js?_v=20230403031923"></script>
+    <script src="assets/js/components/swiper-build.js?_v=20230412225332"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20230412225332"></script>
+    <script src="assets/js/script.js?_v=20230412225332"></script>
+    <script src="assets/js/app.js?_v=20230412225332"></script>
 </body>
 
 </html>
 
-<script src="assets/js/pages/home.js?_v=20230403031923"></script>
+<script src="assets/js/pages/home.js?_v=20230412225332"></script>

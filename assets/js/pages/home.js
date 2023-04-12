@@ -30,3 +30,25 @@ if (document.querySelector('.products-page__slider')) {
     })
 }
 
+const sections = document.querySelectorAll('.section')
+const navigationItem = document.querySelector('.navigation-page__item_other')
+window.addEventListener('scroll', function() {
+    const position = window.scrollY
+
+    for (let index = 0; index < sections.length; index++) {
+        const section = sections[index]
+
+        const top = section.offsetTop
+        const bottom = section.offsetHeight + top
+
+        if (position >= top && position <= bottom) {
+            if (document.querySelector('.section.active')) {
+                document.querySelector('.section.active').classList.remove('active')
+            }
+            section.classList.add('active')
+            navigationItem.textContent = section.dataset.sectionNavigation
+            break
+        }
+    }
+
+})

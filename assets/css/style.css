@@ -236,6 +236,11 @@ img {
   display: block;
 }
 
+.navigation-page {
+  position: relative;
+  z-index: 5;
+}
+
 .navigation-page__item {
   font-family: "Halvar Breitschrift CY";
   color: #A7ABAF;
@@ -355,9 +360,18 @@ svg {
   align-items: center;
   font-size: 18px;
   color: #494D58;
+  position: relative;
+  padding-left: 74px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .link svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 56px;
   height: 24px;
   fill: transparent;
@@ -434,6 +448,9 @@ svg {
 }
 
 .burger {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 0 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -453,6 +470,8 @@ svg {
 .burger__label {
   font-weight: 300;
   color: #494D58;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   font-family: "Halvar Breitschrift CY";
   margin-right: 16px;
   font-size: 28px;
@@ -471,6 +490,8 @@ svg {
 }
 
 .burger__button span {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   position: absolute;
   left: 0;
   width: 100%;
@@ -560,6 +581,11 @@ svg {
   font-size: 56px;
 }
 
+.menu__title a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .menu__list {
   padding-bottom: 40px;
 }
@@ -575,6 +601,8 @@ svg {
 .menu__link {
   font-family: "Halvar Breitschrift CY";
   font-size: 18px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .search-menu {
@@ -594,23 +622,15 @@ svg {
   align-items: center;
 }
 
-.search-menu__item {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  position: relative;
-}
-
 .search-menu__label {
   font-family: "Halvar Breitschrift CY";
   font-weight: 300;
   font-size: 28px;
   margin-right: 16px;
+}
+
+.search-menu__body {
+  position: relative;
 }
 
 .search-menu__input {
@@ -620,14 +640,158 @@ svg {
 .search-menu__input input {
   width: 100%;
   height: 52px;
-  background: #fff;
-  padding-right: 60px;
+  background: transparent;
+  border: transparent;
+  min-width: 380px;
+  padding-right: 50px;
+  padding-left: 0 !important;
+  text-transform: lowercase;
+  font-size: 25px;
+  color: #494D58;
+}
+
+.search-menu__input input::-webkit-input-placeholder {
+  text-transform: lowercase;
+  color: #C4C6CD;
+  font-size: 25px;
+}
+
+.search-menu__input input::-moz-placeholder {
+  text-transform: lowercase;
+  color: #C4C6CD;
+  font-size: 25px;
+}
+
+.search-menu__input input:-ms-input-placeholder {
+  text-transform: lowercase;
+  color: #C4C6CD;
+  font-size: 25px;
+}
+
+.search-menu__input input::-ms-input-placeholder {
+  text-transform: lowercase;
+  color: #C4C6CD;
+  font-size: 25px;
+}
+
+.search-menu__input input::placeholder {
+  text-transform: lowercase;
+  color: #C4C6CD;
+  font-size: 25px;
+}
+
+.search-menu__item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.search-menu__item.active .search-menu__input {
+  display: block;
+}
+
+.search-menu__item.active .search-menu__label {
+  display: none;
 }
 
 .search-menu__icon svg {
   width: 32px;
   height: 32px;
   color: #494D58;
+}
+
+.result-search-menu {
+  background: #F9F9F9;
+  position: absolute;
+  overflow: auto;
+  max-height: 370px;
+  bottom: -10px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  z-index: 10;
+  padding-bottom: 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.result-search-menu.active {
+  opacity: 1;
+  visibility: visible;
+  bottom: 0;
+}
+
+.result-search-menu__product {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 2px solid #EAEAED;
+}
+
+.result-search-menu__image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 130px;
+  flex: 0 0 130px;
+  margin-right: 16px;
+}
+
+.result-search-menu__image img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.result-search-menu__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.result-search-menu__pin {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #636772;
+  margin-bottom: 4px;
+}
+
+.result-search-menu__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: lowercase;
+  color: #494D58;
+}
+
+.result-search-menu__category {
+  font-family: "Halvar Breitschrift CY";
+  font-size: 18px;
+  margin-bottom: 32px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.result-search-menu__item:last-child .result-search-menu__category {
+  margin-bottom: 0;
+}
+
+.result-search-menu__list {
+  margin-bottom: 19px;
+}
+
+.result-search-menu__list:last-child {
+  margin: 0;
 }
 
 input[type=text],
@@ -769,6 +933,8 @@ textarea.input::placeholder {
   font-size: 18px;
   font-family: "Halvar Breitschrift CY";
   color: #EAEAED;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu-footer {
@@ -790,6 +956,8 @@ textarea.input::placeholder {
   font-family: "Halvar Breitschrift CY";
   color: #EAEAED;
   line-height: 120%;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .info-footer {
@@ -809,12 +977,16 @@ textarea.input::placeholder {
   font-size: 18px;
   font-family: "Halvar Breitschrift CY";
   color: #EAEAED;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .info-footer__email {
   font-size: 18px;
   font-family: "Halvar Breitschrift CY";
   color: #EAEAED;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .info-footer__location {
@@ -848,9 +1020,13 @@ textarea.input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .links-footer__icon svg {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   color: #EAEAED;
   width: 30px;
   height: 24px;
@@ -862,6 +1038,8 @@ textarea.input::placeholder {
   text-transform: lowercase;
   font-family: "Halvar Breitschrift CY";
   color: #EAEAED;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 @media (min-width: 768.98px) {
@@ -1221,6 +1399,30 @@ textarea.input::placeholder {
     font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
   }
 
+  .search-menu__input input {
+    font-size: calc(16px + 9 * ((100vw - 320px) / 1600));
+  }
+
+  .search-menu__input input::-webkit-input-placeholder {
+    font-size: calc(16px + 9 * ((100vw - 320px) / 1600));
+  }
+
+  .search-menu__input input::-moz-placeholder {
+    font-size: calc(16px + 9 * ((100vw - 320px) / 1600));
+  }
+
+  .search-menu__input input:-ms-input-placeholder {
+    font-size: calc(16px + 9 * ((100vw - 320px) / 1600));
+  }
+
+  .search-menu__input input::-ms-input-placeholder {
+    font-size: calc(16px + 9 * ((100vw - 320px) / 1600));
+  }
+
+  .search-menu__input input::placeholder {
+    font-size: calc(16px + 9 * ((100vw - 320px) / 1600));
+  }
+
   .footer__company {
     font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
   }
@@ -1311,6 +1513,10 @@ textarea.input::placeholder {
 
   .search-menu__label {
     display: none;
+  }
+
+  .search-menu__body {
+    width: 100%;
   }
 
   .search-menu__input {
@@ -1473,5 +1679,75 @@ textarea.input::placeholder {
 @media (any-hover: hover) {
   .button:hover {
     background: #25497c;
+  }
+
+  .link:hover {
+    padding: 5px 74px 5px 3px;
+    background: #FEED01;
+    color: #494D58 !important;
+  }
+
+  .link:hover svg {
+    margin-right: 0;
+    margin-left: 24px;
+    left: auto;
+    right: 0;
+    color: #494D58 !important;
+  }
+
+  .link:hover span {
+    color: #494D58 !important;
+  }
+
+  .burger:hover {
+    background: #FEED01;
+  }
+
+  .burger:hover .burger__label {
+    color: #494D58 !important;
+  }
+
+  .burger:hover .burger__button span {
+    background: #494D58 !important;
+  }
+
+  .menu__title a:hover {
+    background: #FEED01;
+  }
+
+  .menu__link:hover {
+    background: #FEED01;
+  }
+
+  .footer__policy:hover {
+    color: #494D58 !important;
+    background: #FEED01;
+  }
+
+  .menu-footer__link:hover {
+    background: #FEED01;
+    color: #494D58 !important;
+  }
+
+  .info-footer__phone:hover {
+    color: #494D58 !important;
+    background: #FEED01;
+  }
+
+  .info-footer__email:hover {
+    color: #494D58 !important;
+    background: #FEED01;
+  }
+
+  .links-footer__item a:hover {
+    background: #FEED01;
+  }
+
+  .links-footer__item a:hover span {
+    color: #494D58 !important;
+  }
+
+  .links-footer__item a:hover svg {
+    color: #494D58 !important;
   }
 }

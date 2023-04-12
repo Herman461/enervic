@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css?_v=20230403031923">
-    <link rel="stylesheet" href="assets/css/pages/about.css?_v=20230403031923">
+    <link rel="stylesheet" href="assets/css/style.css?_v=20230412225332">
+    <link rel="stylesheet" href="assets/css/pages/about.css?_v=20230412225332">
     <title>О нас</title>
 </head>
 
@@ -32,17 +32,55 @@
                     </div>
                     <div class="menu__content">
                         <form action="#" class="menu__search search-menu">
-                            <div class="search-menu__item">
-                                <div class="search-menu__label">поиск по&nbsp;каталогу</div>
-                                <div class="search-menu__input">
-                                    <input data-placeholder="введите наименование или артикул" placeholder="поиск по каталогу" class="input" type="text">
+                            <div class="search-menu__body">
+                                <div class="search-menu__item">
+                                    <div class="search-menu__label">поиск по&nbsp;каталогу</div>
+                                    <div class="search-menu__input">
+                                        <input placeholder="название или артикул" class="input" type="text">
+                                    </div>
+                                    <div class="search-menu__icon stroke">
+                                        <svg>
+                                            <use xlink:href="assets/images/icons/icons.svg#search"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="search-menu__icon stroke">
-                                    <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#search"></use>
-                                    </svg>
+                                <div class="search-menu__result result-search-menu">
+                                    <ul class="result-search-menu__list">
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__product">
+                                                <div class="result-search-menu__image">
+                                                    <img src="assets/images/product/item.png" alt="">
+                                                </div>
+                                                <div class="result-search-menu__content">
+                                                    <div class="result-search-menu__pin">SEW20.1</div>
+                                                    <div class="result-search-menu__name">Скоба Г-образная</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__product">
+                                                <div class="result-search-menu__image">
+                                                    <img src="assets/images/product/item.png" alt="">
+                                                </div>
+                                                <div class="result-search-menu__content">
+                                                    <div class="result-search-menu__pin">SEW20.1</div>
+                                                    <div class="result-search-menu__name">Скоба Г-образная</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="result-search-menu__list">
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__category">ценности</a>
+                                        </li>
+                                        <li class="result-search-menu__item">
+                                            <a href="" class="result-search-menu__category">производство</a>
+                                        </li>
+                                    </ul>
+
                                 </div>
                             </div>
+
                         </form>
                         <div class="menu__row">
                             <div class="menu__column">
@@ -201,7 +239,7 @@
                                         <div data-spoiler="" class="spoilers-about__title stroke">
                                             <div class="spoilers-about__icon">
                                                 <svg>
-                                                    <use xlink:href="assets/images/icons/icons.svg#lightbold"></use>
+                                                    <use xlink:href="assets/images/icons/icons.svg#arrows"></use>
                                                 </svg>
                                             </div>
                                             <span>как нас найти</span>
@@ -219,7 +257,7 @@
                                         <div data-spoiler="" class="spoilers-about__title stroke">
                                             <div class="spoilers-about__icon">
                                                 <svg>
-                                                    <use xlink:href="assets/images/icons/icons.svg#lightbold"></use>
+                                                    <use xlink:href="assets/images/icons/icons.svg#goals"></use>
                                                 </svg>
                                             </div>
                                             <span>наши цели</span>
@@ -230,14 +268,18 @@
                                             </div>
                                         </div>
                                         <div class="spoilers-about__text text">
-                                            <p>Мы&nbsp;разрабатываем, тестируем и&nbsp;производим собственные решения  и&nbsp;продукты. Это&nbsp;даёт нам&nbsp;возможность обслуживать потребности клиентов на&nbsp;индивидуальном уровне и&nbsp;выводить на&nbsp;рынок новые инновации. Наша аккредитованная собственная лаборатория поддерживает разработку  и&nbsp;гарантирует, что&nbsp;продукты будут долговечными, качественными  и&nbsp;долговечными.</p>
+                                            <p>Мы&nbsp;разрабатываем, тестируем и&nbsp;производим собственные решения
+                                                <br>и&nbsp;продукты. Это&nbsp;даёт нам&nbsp;возможность обслуживать потребности клиентов на&nbsp;индивидуальном уровне и&nbsp;выводить на&nbsp;рынок новые инновации. Наша аккредитованная собственная лаборатория поддерживает разработку
+                                                <br>и&nbsp;гарантирует, что&nbsp;продукты будут долговечными, качественными
+                                                <br>и&nbsp;долговечными.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="spoilers-about__item">
                                         <div data-spoiler="" class="spoilers-about__title stroke">
                                             <div class="spoilers-about__icon">
                                                 <svg>
-                                                    <use xlink:href="assets/images/icons/icons.svg#lightbold"></use>
+                                                    <use xlink:href="assets/images/icons/icons.svg#truck"></use>
                                                 </svg>
                                             </div>
                                             <span>Что&nbsp;мы&nbsp;делаем</span>
@@ -248,7 +290,11 @@
                                             </div>
                                         </div>
                                         <div class="spoilers-about__text text">
-                                            <p>У&nbsp;нас&nbsp;есть&nbsp;производство мирового класса в&nbsp;6&nbsp;странах, и&nbsp;мы&nbsp;стремимся  к&nbsp;превосходному качеству, эффективности, возможности доставки  и&nbsp;гибкости во&nbsp;всем, что&nbsp;мы&nbsp;делаем. Познакомьтесь с&nbsp;нашими заводами  в&nbsp;Эстонии, Финляндии, Франции, Индии, Италии и&nbsp;Ирландии.</p>
+                                            <p>У&nbsp;нас&nbsp;есть&nbsp;производство мирового класса в&nbsp;6&nbsp;странах, и&nbsp;мы&nbsp;стремимся
+                                                <br>к&nbsp;превосходному качеству, эффективности, возможности доставки
+                                                <br>и&nbsp;гибкости во&nbsp;всем, что&nbsp;мы&nbsp;делаем. Познакомьтесь с&nbsp;нашими заводами
+                                                <br>в&nbsp;Эстонии, Финляндии, Франции, Индии, Италии и&nbsp;Ирландии.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -394,11 +440,11 @@
         </footer>
 
     </div>
-    <script src="assets/js/components/swiper-build.js?_v=20230403031923"></script>
-    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20230403031923"></script>
-    <script src="assets/js/pages/about.js?_v=20230403031923"></script>
-    <script src="assets/js/script.js?_v=20230403031923"></script>
-    <script src="assets/js/app.js?_v=20230403031923"></script>
+    <script src="assets/js/components/swiper-build.js?_v=20230412225332"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20230412225332"></script>
+    <script src="assets/js/pages/about.js?_v=20230412225332"></script>
+    <script src="assets/js/script.js?_v=20230412225332"></script>
+    <script src="assets/js/app.js?_v=20230412225332"></script>
 </body>
 
 </html>
