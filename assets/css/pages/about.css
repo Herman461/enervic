@@ -245,12 +245,11 @@
     width: 100%;
   }
 
-  .spoilers-about__icon svg {
+  .spoilers-about__icon img {
     width: 48px;
     height: 48px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    color: #494D58;
   }
 
   .mission-about__title svg {
@@ -373,7 +372,7 @@
     padding-right: 136px;
   }
 
-  .spoilers-about__icon svg {
+  .spoilers-about__icon img {
     width: 96px;
     height: 96px;
   }
@@ -521,7 +520,7 @@
     border-bottom: 1px solid #636772;
   }
 
-  .spoilers-about__icon svg {
+  .spoilers-about__icon img {
     display: none;
   }
 

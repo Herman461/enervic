@@ -2,6 +2,23 @@
   padding-bottom: 294px;
 }
 
+.category__label {
+  font-family: "Halvar Breitschrift CY";
+  font-size: 56px;
+  margin-bottom: 56px;
+  font-weight: 300;
+  color: #494D58;
+}
+
+.category__label:last-child {
+  margin-bottom: 0;
+}
+
+.category__label_t {
+  margin-top: 80px;
+  margin-bottom: 76px;
+}
+
 .category__title {
   font-family: "Halvar Breitschrift CY";
   font-size: 80px;
@@ -109,21 +126,40 @@
   color: #636772;
 }
 
+.item-category__body {
+  display: block;
+  height: 100%;
+  background: #fff;
+}
+
 .item-category__image {
   margin-bottom: 16px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 296px;
 }
 
 .item-category__image img {
-  min-height: 296px;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   -o-object-position: center;
   object-position: center;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .item-category__pin {
+  padding-left: 8px;
+  padding-right: 8px;
   margin-bottom: 4px;
   font-size: 18px;
   text-transform: uppercase;
@@ -131,6 +167,9 @@
 }
 
 .item-category__title {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
   font-family: "Halvar Breitschrift CY";
   text-transform: lowercase;
   font-size: 18px;
@@ -180,6 +219,22 @@
 @media (max-width: 1920px) {
   .page {
     padding-bottom: calc(120px + 174 * ((100vw - 320px) / 1600));
+  }
+
+  .category__label {
+    font-size: calc(28px + 28 * ((100vw - 320px) / 1600));
+  }
+
+  .category__label {
+    margin-bottom: calc(15px + 41 * ((100vw - 320px) / 1600));
+  }
+
+  .category__label_t {
+    margin-top: calc(30px + 50 * ((100vw - 320px) / 1600));
+  }
+
+  .category__label_t {
+    margin-bottom: calc(50px + 26 * ((100vw - 320px) / 1600));
   }
 
   .category__title {
@@ -238,8 +293,8 @@
     margin-bottom: calc(12px + 4 * ((100vw - 320px) / 1600));
   }
 
-  .item-category__image img {
-    min-height: calc(165px + 131 * ((100vw - 320px) / 1600));
+  .item-category__image {
+    height: calc(165px + 131 * ((100vw - 320px) / 1600));
   }
 
   .item-category__pin {
@@ -256,6 +311,10 @@
 }
 
 @media (max-width: 991.98px) {
+  .category__prev {
+    padding-left: 50px !important;
+  }
+
   .category__paging {
     display: none;
   }
