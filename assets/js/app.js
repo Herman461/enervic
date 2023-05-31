@@ -128,5 +128,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
+
+
+    const dynamicPhrases = document.querySelectorAll('[data-dynamic-phrases]')
+
+    if (dynamicPhrases.length > 0) {
+        for (let index = 0; index < dynamicPhrases.length; index++) {
+            const el = dynamicPhrases[index]
+            const content = el.dataset.dynamicPhrases
+
+            if (content === '') continue
+
+            const items = content.split(', ')
+
+            let j = 1
+            setInterval(function() {
+                el.classList.add('invisible')
+
+                setTimeout(function() {
+                    el.querySelector('span').innerHTML = items[j]
+                    el.classList.remove('invisible')
+                    j++
+                    if (j > items.length - 1) {
+                        j = 0
+                    }
+                }, 600)
+
+            }, 2000)
+        }
+    }
 })
 
