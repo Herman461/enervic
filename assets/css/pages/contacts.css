@@ -160,6 +160,14 @@
   font-size: 18px;
 }
 
+@media (min-width: 767.98px) {
+  .contacts__slider_people .contacts__office {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 1 50% !important;
+    flex: 0 1 50% !important;
+  }
+}
+
 @media (min-width: 768.98px) {
   .department-contacts__item {
     display: -webkit-box;
@@ -185,6 +193,10 @@
 }
 
 @media (min-width: 991.98px) {
+  .contacts__where {
+    display: none;
+  }
+
   .contacts__title svg {
     display: none;
   }
@@ -309,6 +321,12 @@
 }
 
 @media (max-width: 768.98px) {
+  .contacts__where {
+    margin-bottom: 180px;
+    display: inline-block;
+    padding-left: 50px;
+  }
+
   .department-contacts__item {
     padding: 20px 0;
   }

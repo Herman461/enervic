@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let index = 0; index < contactsSliders.length; index++) {
             const contactsSlider = contactsSliders[index]
 
+
             const slider = new Swiper(contactsSlider, {
                 speed: 800,
 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             })
             contactsSwiperSliders.push(slider)
+
         }
 
     }

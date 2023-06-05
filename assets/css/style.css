@@ -416,6 +416,48 @@ svg {
   font-size: 18px;
 }
 
+.paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.paging__item {
+  margin-right: 16px;
+}
+
+.paging__item:first-child {
+  margin-right: 40px;
+}
+
+.paging__item:last-child {
+  margin-left: 24px;
+  margin-right: 0;
+}
+
+.paging__item_disabled .paging__link {
+  cursor: auto;
+  pointer-events: none;
+}
+
+.paging__item_disabled svg {
+  opacity: 0.5;
+}
+
+.paging__item svg {
+  width: 56px;
+  height: 24px;
+}
+
+.paging__link {
+  font-family: "Halvar Breitschrift CY";
+  font-weight: 300;
+  font-size: 28px;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -581,6 +623,30 @@ svg {
   font-size: 56px;
 }
 
+.menu__title[data-spoiler] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.menu__title svg {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 20px;
+  height: 20px;
+}
+
+.menu__title.active svg {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
 .menu__title a {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -588,6 +654,23 @@ svg {
 
 .menu__list {
   padding-bottom: 40px;
+}
+
+.menu__main-list .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.menu__main-list .menu__item {
+  padding: 0 10px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  margin-bottom: 20px;
 }
 
 .menu__item {
@@ -1055,48 +1138,6 @@ textarea.input::placeholder {
     -ms-flex: 0 0 82px;
     flex: 0 0 82px;
   }
-
-  .paging {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .paging__item {
-    margin-right: 16px;
-  }
-
-  .paging__item:first-child {
-    margin-right: 40px;
-  }
-
-  .paging__item:last-child {
-    margin-left: 24px;
-    margin-right: 0;
-  }
-
-  .paging__item_disabled .paging__link {
-    cursor: auto;
-    pointer-events: none;
-  }
-
-  .paging__item_disabled svg {
-    opacity: 0.5;
-  }
-
-  .paging__item svg {
-    width: 56px;
-    height: 24px;
-  }
-
-  .paging__link {
-    font-family: "Halvar Breitschrift CY";
-    font-weight: 300;
-    font-size: 28px;
-  }
 }
 
 @media (min-width: 991.98px) {
@@ -1240,6 +1281,10 @@ textarea.input::placeholder {
     padding: 0 25px;
   }
 
+  .menu__title_hidden {
+    display: none;
+  }
+
   .search-menu {
     width: 70%;
     padding-left: 117px;
@@ -1375,6 +1420,10 @@ textarea.input::placeholder {
     font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   }
 
+  .paging__link {
+    font-size: calc(20px + 8 * ((100vw - 320px) / 1600));
+  }
+
   .burger {
     min-width: calc(110px + 37 * ((100vw - 320px) / 1600));
   }
@@ -1485,8 +1534,25 @@ textarea.input::placeholder {
     display: inline;
   }
 
+  .paging {
+    margin-top: 20px;
+  }
+
   .categories-menu {
     display: none;
+  }
+
+  .header {
+    background: #EAEAED;
+  }
+
+  .header__container {
+    min-height: 65px;
+  }
+
+  .header__logo img {
+    width: 123px;
+    height: 22px;
   }
 
   .menu__content {
@@ -1498,8 +1564,30 @@ textarea.input::placeholder {
     padding: 0 15px;
   }
 
+  .menu__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
   .menu__title {
     border-top: 1px solid rgba(99, 103, 114, 0.8);
+  }
+
+  .menu__title {
+    padding: 20px 0;
+  }
+
+  .menu__title_hidden {
+    border-bottom: 1px solid rgba(99, 103, 114, 0.8);
+  }
+
+  .menu__list {
+    display: none;
   }
 
   .search-menu {
@@ -1621,27 +1709,6 @@ textarea.input::placeholder {
   .title {
     font-size: 28px;
   }
-
-  .paging {
-    display: none;
-  }
-
-  .header {
-    background: #EAEAED;
-  }
-
-  .header__container {
-    min-height: 65px;
-  }
-
-  .header__logo img {
-    width: 123px;
-    height: 22px;
-  }
-
-  .menu__title {
-    padding: 20px 0;
-  }
 }
 
 @media (max-width: 380.98px) {
@@ -1657,12 +1724,6 @@ textarea.input::placeholder {
 @media (max-width: 360.98px) {
   .info-footer__email {
     margin-right: 25px;
-  }
-}
-
-@media (min-width: 768.98px) and (max-width: 1920px) {
-  .paging__link {
-    font-size: calc(20px + 8 * ((100vw - 320px) / 1600));
   }
 }
 

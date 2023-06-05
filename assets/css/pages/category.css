@@ -32,6 +32,10 @@
   transform: rotate(-180deg);
 }
 
+.category__text {
+  margin-top: 24px;
+}
+
 .category__search {
   margin-bottom: 64px;
 }
@@ -184,6 +188,10 @@
     margin-bottom: 64px;
     max-width: 677px;
   }
+
+  .links-category {
+    display: none;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -315,10 +323,6 @@
     padding-left: 50px !important;
   }
 
-  .category__paging {
-    display: none;
-  }
-
   .search-category__input .input {
     padding-right: 60px;
     padding-left: 20px;
@@ -331,7 +335,6 @@
 
 @media (max-width: 768.98px) {
   .category__button {
-    margin-bottom: 24px;
     min-height: 52px;
     background: #F9F9F9;
     display: -webkit-box;
@@ -370,10 +373,33 @@
   .item-category__pin {
     line-height: 140%;
   }
+
+  .links-category__item a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 52px;
+    background: #F9F9F9;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1px 20px;
+    font-family: "Halvar Breitschrift CY";
+    font-size: 18px;
+    border-top: 1px solid #eaeaed;
+  }
 }
 
 @media (max-width: 768.98px) and (max-width: 1920px) {
   .category__button {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
+  }
+
+  .links-category__item a {
     font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
   }
 }
